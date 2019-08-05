@@ -19,6 +19,10 @@ Bundler.require(*Rails.groups)
 
 module Garages
   class Application < Rails::Application
+
+    config.to_prepare do
+      Devise::SessionsController.layout 'admin_lte_2_login'
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -29,5 +33,11 @@ module Garages
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.paths['config/routes.rb'].concat Dir[Rails.root.join("config/routes/*.rb")]
+
+    config.generators do |g|
+      g.template_engine :slim
+    end
   end
 end
