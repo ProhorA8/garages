@@ -1,0 +1,16 @@
+<h2> Добавление пользователя</h2>
+<%= form_for @user, url: admin_user_path do |f| %>
+
+  <p>
+    Имя <br>
+  <%= f.text_field :name %><p/>
+  <p>
+    Имэйл
+    <%= f.text_field :email %>
+  <p/>
+  <p>
+    <%= f.submit 'Сохранить'%>
+
+  </p>
+<% end %>
+

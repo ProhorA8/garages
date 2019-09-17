@@ -12,9 +12,8 @@
 //
 //= require activestorage
 //= require cable
-//= require jquery3
+//= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require popper
 //= require bootstrap-sprockets
 //= require app
