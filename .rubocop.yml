@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - 'db/migrate/*.rb'
+    - 'config/**/*'
+
+Metrics/LineLength:
+  Max: 120

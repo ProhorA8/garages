@@ -44,9 +44,13 @@ gem 'adminlte2-rails'
 gem 'jquery-rails'
 gem 'jquery-slimscroll-rails'
 gem 'jquery-ui-rails'
-gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap', '~> 4.3.1'
 
+#The EmailAddress Gem to work with and validate email addresses.
+gem 'email_address', '~> 0.1.11'
+
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
