@@ -4,4 +4,4 @@ AllCops:
     - 'config/**/*'
 
 Metrics/LineLength:
-  Max: 120
+  Max: 100
