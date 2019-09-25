@@ -3,7 +3,6 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-   # @users = User.paginate(page: params[:page],per_page: 4)
     @users = User .order("name").page(params[:page]).per(3)
   end
 
