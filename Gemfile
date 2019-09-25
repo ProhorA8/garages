@@ -47,7 +47,7 @@ gem 'jquery-ui-rails'
 gem 'bootstrap', '~> 4.3.1'
 
 #The EmailAddress Gem to work with and validate email addresses.
-gem 'email_address', '~> 0.1.11'
+gem 'validates_email_format_of'
 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
