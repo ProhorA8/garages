@@ -1,9 +1,9 @@
 AllCops:
 
   Exclude:
-    - 'db/migrate/*.rb'
-    - 'config/**/*'
-    - 'script/**'
+    - db/migrate/*.rb
+    - config/**/*
+    - script/**
 
 
 Layout/DefEndAlignment:
@@ -14,24 +14,19 @@ Documentation:
 
 Metrics/LineLength:
   Max: 100
-<<<<<<< HEAD
+
   Exclude:
-    - 'config/initializers/**'
-    - 'config/environments/**'
-    - 'config/schedule.rb'
-    - 'config/initializers/devise.rb'
-    - 'config/initializers/config.rb'
-    - 'config/initializers/simple_form.rb'
+    - config/initializers/**
+    - config/environments/**
+    - config/schedule.rb
 
 TargetRubyVersion: 2.5.1
 Exclude:
-  - 'bundle//*'
-  - 'bin/*'
-  - 'vendor//*'
-  - 'node_modules//*'
-  - 'public//*'
-  - 'db//*'
-  - 'lib//*'
-  - 'config/unicorn.rb'
-=======
->>>>>>> 6dfbd78afab8ddf9b929bc9c11c7b05dc2bae2e0
+  - //bundle/*
+  - bin/*
+  - vendor//*
+  - node_modules//*
+  - public//*
+  - db//*
+  - lib//*
+  - config/unicorn.rb
