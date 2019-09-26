@@ -48,7 +48,11 @@ gem 'jquery-rails'
 gem 'jquery-slimscroll-rails'
 gem 'jquery-ui-rails'
 
+<<<<<<< HEAD
 # The EmailAddress Gem to work with and validate email addresses.
+=======
+#The EmailAddress Gem to work with and validate email addresses.
+>>>>>>> 6dfbd78afab8ddf9b929bc9c11c7b05dc2bae2e0
 gem 'validates_email_format_of'
 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps

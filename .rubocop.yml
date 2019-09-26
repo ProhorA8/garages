@@ -14,6 +14,7 @@ Documentation:
 
 Metrics/LineLength:
   Max: 100
+<<<<<<< HEAD
   Exclude:
     - 'config/initializers/**'
     - 'config/environments/**'
@@ -32,3 +33,5 @@ Exclude:
   - 'db//*'
   - 'lib//*'
   - 'config/unicorn.rb'
+=======
+>>>>>>> 6dfbd78afab8ddf9b929bc9c11c7b05dc2bae2e0
