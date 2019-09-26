@@ -1,5 +1,6 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
 
-  validates :email, :name, presence: true #вызов автоматом
-  validates :email, uniqueness: true, format: {with: URI::MailTo::EMAIL_REGEXP}
-    end
+class User < ApplicationRecord
+  validates :email, :name, presence: true
+  validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+end
