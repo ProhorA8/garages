@@ -75,6 +75,10 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    email_format (1.0.0)
+      activemodel
+      email_regex
+    email_regex (0.0.1)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.11.1)
@@ -232,6 +236,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  email_format
   jbuilder (~> 2.5)
   jquery-rails
   jquery-slimscroll-rails
