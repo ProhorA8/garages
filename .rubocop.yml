@@ -1,5 +1,16 @@
 AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+    - //bundle/*
+    - bin/*
+    - vendor//*
+    - node_modules//*
+    - public//*
+    - db//*
+    - lib//*
+    - config/unicorn.rb
 
+Style/FrozenStringLiteralComment:
   Exclude:
     - db/migrate/*.rb
     - config/**/*
@@ -14,19 +25,7 @@ Documentation:
 
 Metrics/LineLength:
   Max: 100
-
   Exclude:
     - config/initializers/**
     - config/environments/**
     - config/schedule.rb
-
-TargetRubyVersion: 2.5.1
-Exclude:
-  - //bundle/*
-  - bin/*
-  - vendor//*
-  - node_modules//*
-  - public//*
-  - db//*
-  - lib//*
-  - config/unicorn.rb
