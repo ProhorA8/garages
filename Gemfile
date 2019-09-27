@@ -48,15 +48,13 @@ gem 'jquery-rails'
 gem 'jquery-slimscroll-rails'
 gem 'jquery-ui-rails'
 
-
 # The EmailAddress Gem to work with and validate email addresses.
 gem 'validates_email_format_of'
 
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
-#Email Format
+# Email Format
 gem 'email_format'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
