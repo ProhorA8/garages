@@ -1,7 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.5.1
   Exclude:
-    - //bundle/*
+    - bundle//*
     - bin/*
     - vendor//*
     - node_modules//*
@@ -15,7 +15,6 @@ Style/FrozenStringLiteralComment:
     - db/migrate/*.rb
     - config/**/*
     - script/**
-
 
 Layout/DefEndAlignment:
   AutoCorrect: true

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-class Admin
-  class UsersController < Admin::BaseController
+  class Admin::UsersController < BaseController
     before_action :set_user, only: %i[show edit update destroy]
 
     def index
@@ -47,4 +46,3 @@ class Admin
       params.require(:user).permit(:name, :email)
     end
   end
-end

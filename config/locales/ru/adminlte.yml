@@ -1,4 +1,17 @@
 ru:
+  common:
+    errors: 'При заполении формы возниели ошибки'
+    back: 'Назад'
+  admin:
+    users:
+      index:
+        name: 'Все пользователи'
+      new:
+        name: 'Новый пользователь'
+        submit:
+          '%{action} пользователя'
+      edit:
+        name: 'Редактирование'
   active_admin:
     dashboard: "Панель управления"
     dashboard_welcome:
