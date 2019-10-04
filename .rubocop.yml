@@ -1,13 +1,13 @@
 AllCops:
   TargetRubyVersion: 2.5.1
   Exclude:
-    - bundle//*
+    - bundle/*
     - bin/*
-    - vendor//*
-    - node_modules//*
-    - public//*
-    - db//*
-    - lib//*
+    - vendor/*
+    - node_modules/*
+    - public/*
+    - db/*
+    - lib/*
     - config/unicorn.rb
 
 Style/FrozenStringLiteralComment:
