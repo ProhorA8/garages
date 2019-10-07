@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::UsersController < Admin::BaseController
+class Admin::UsersController < BaseController
   before_action :set_user, only: %i[show edit update destroy]
 
   def index
