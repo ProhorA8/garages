@@ -54,13 +54,11 @@ gem 'validates_email_format_of'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 
-# Validates whether the specified value is a valid email address.  Returns nil if the value is valid, otherwise returns an array
+# Validates whether the specified value is a valid email address.
+# Returns nil if the value is valid,otherwise returns an array
 gem 'email_format'
 
 gem 'russian', '~> 0.6.0'
-
-# Devise is a flexible authentication solution for Rails based on Warden
-gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

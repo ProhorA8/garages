@@ -26,11 +26,9 @@ class Admin::UsersController < BaseController
   end
 
   def update
-    if @user.update(user_params)
-      # lavrik - if not update
-      # # if @user.update(user_params)
-      redirect_to controller: 'admin/users', action: 'index'
-      end
+    @user.update(user_params)
+    # lavrik - if not update
+    redirect_to controller: 'admin/users', action: 'index'
   end
 
   def destroy

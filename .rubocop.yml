@@ -28,3 +28,7 @@ Metrics/LineLength:
     - config/initializers/**
     - config/environments/**
     - config/schedule.rb
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
