@@ -58,6 +58,7 @@ gem 'kaminari'
 # Returns nil if the value is valid,otherwise returns an array
 gem 'email_format'
 
+#Russian language support for Ruby and Rails, using I18n library.
 gem 'russian', '~> 0.6.0'
 
 group :development, :test do
