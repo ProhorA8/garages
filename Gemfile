@@ -61,6 +61,11 @@ gem 'email_format'
 #Russian language support for Ruby and Rails, using I18n library.
 gem 'russian', '~> 0.6.0'
 
+#Framework for handling and responding to web requests.
+# It provides mechanisms for routing, defining controllers that implement actions,
+# and generating responses by rendering views , which are templates of various formats.
+gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

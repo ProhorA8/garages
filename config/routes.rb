@@ -3,9 +3,5 @@ Rails.application.routes.draw do
     instance_eval(File.read(Rails.root.join("config/routes/#{routes_name}.rb")))
   end
   draw :admin
-
   root 'welcome#show', as: 'home'
-
-  # lavrik - this used?
-  resource :users, except: :update
 end
