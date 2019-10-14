@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: %i[show edit update destroy]
 
   def index
-    @users = User .order(:name).page(params[:page]).per(6)
+    @users = User.order(:name).page(params[:page]).per(6)
   end
 
   def show; end
@@ -18,7 +18,6 @@ class Admin::UsersController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
-      # lavrik - url helper - more short
       redirect_to admin_users_path
     else
       render 'new'
@@ -28,17 +27,15 @@ class Admin::UsersController < Admin::BaseController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to :action => 'index'
+      redirect_to admin_users_path
     else
       render 'index'
     end
   end
 
-
-
   def destroy
     @user.destroy
-    redirect_to controller: 'admin/users', action: 'index'
+    redirect_to admin_users_path
   end
 
   private

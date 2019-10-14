@@ -58,10 +58,10 @@ gem 'kaminari'
 # Returns nil if the value is valid,otherwise returns an array
 gem 'email_format'
 
-#Russian language support for Ruby and Rails, using I18n library.
+# Russian language support for Ruby and Rails, using I18n library.
 gem 'russian', '~> 0.6.0'
 
-#Framework for handling and responding to web requests.
+# Framework for handling and responding to web requests.
 # It provides mechanisms for routing, defining controllers that implement actions,
 # and generating responses by rendering views , which are templates of various formats.
 gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
