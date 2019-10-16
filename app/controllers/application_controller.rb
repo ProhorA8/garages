@@ -1,2 +1,3 @@
-class ApplicationController < ActionController::Base
-end
+# frozen_string_literal: true
+
+class ApplicationController < ActionController::Base; end

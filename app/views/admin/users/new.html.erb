@@ -1,0 +1,29 @@
+<h2> Новый пользователь</h2>
+
+<%= form_for @user, url: admin_users_path do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, 'ошибки') %>, запрет на сохранение:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+          </ul>
+    </div>
+  <% end %>
+
+
+  <p>  Имя <br>
+  <%= f.text_field :name %><p/>
+  <p> Имэйл <br>
+  <%= f.text_field :email %>
+    <p/>
+  <p>
+  <%= f.submit 'Сохранить'%>
+    </p>
+    <% end %>
+
+<%= link_to 'Назад', admin_users_path %>
