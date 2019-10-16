@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -41,29 +43,42 @@ gem 'slim-rails'
 gem 'adminlte2-rails'
 
 # A gem to automate using jQuery with Rails
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'jquery-slimscroll-rails'
 gem 'jquery-ui-rails'
-gem 'will_paginate', '~> 3.1.0'
-gem 'bootstrap', '~> 4.3.1'
 
+# The EmailAddress Gem to work with and validate email addresses.
+gem 'validates_email_format_of'
+
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+
+# Validates whether the specified value is a valid email address.
+# Returns nil if the value is valid,otherwise returns an array
+gem 'email_format'
+
+# Russian language support for Ruby and Rails, using I18n library.
+gem 'russian', '~> 0.6.0'
+
+# Framework for handling and responding to web requests.
+# It provides mechanisms for routing, defining controllers that implement actions,
+# and generating responses by rendering views , which are templates of various formats.
+gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'devise'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

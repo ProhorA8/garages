@@ -1,16 +1,16 @@
 require_relative 'boot'
 
-require "rails"
+require 'rails'
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-require "sprockets/railtie"
+require 'active_model/railtie'
+require 'active_job/railtie'
+require 'active_record/railtie'
+require 'active_storage/engine'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'action_view/railtie'
+require 'action_cable/engine'
+require 'sprockets/railtie'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -19,9 +19,7 @@ Bundler.require(*Rails.groups)
 
 module Garages
   class Application < Rails::Application
-
     config.to_prepare do
-      Devise::SessionsController.layout 'admin_lte_2_login'
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -34,7 +32,7 @@ module Garages
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    config.paths['config/routes.rb'].concat Dir[Rails.root.join("config/routes/*.rb")]
+    config.paths['config/routes.rb'].concat Dir[Rails.root.join('config/routes/*.rb')]
 
     config.generators do |g|
       g.template_engine :slim

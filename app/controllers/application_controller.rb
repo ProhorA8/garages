@@ -1,11 +1,3 @@
-class ApplicationController < ActionController::Base
+# frozen_string_literal: true
 
-  def new
-  end
-
-  def create
-    render plain: params[:username].inspect
-    render plain: params[:email]
-  end
-
-end
+class ApplicationController < ActionController::Base; end
