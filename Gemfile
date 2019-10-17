@@ -69,6 +69,10 @@ gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
 # Slim is a template language goal is to reduce the view syntax to the essential parts.
 gem 'slim'
 
+# Simple Form is to not touch your way of defining the layout,
+# letting you find the better design for your eyes.
+gem 'simple_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
