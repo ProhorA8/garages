@@ -51,11 +51,11 @@ gem 'jquery-ui-rails'
 # The EmailAddress Gem to work with and validate email addresses.
 gem 'validates_email_format_of'
 
-# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps.
 gem 'kaminari'
 
 # Validates whether the specified value is a valid email address.
-# Returns nil if the value is valid,otherwise returns an array
+# Returns nil if the value is valid,otherwise returns an array.
 gem 'email_format'
 
 # Russian language support for Ruby and Rails, using I18n library.
@@ -65,6 +65,9 @@ gem 'russian', '~> 0.6.0'
 # It provides mechanisms for routing, defining controllers that implement actions,
 # and generating responses by rendering views , which are templates of various formats.
 gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
+
+# Slim is a template language goal is to reduce the view syntax to the essential parts.
+gem 'slim'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

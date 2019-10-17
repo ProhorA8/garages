@@ -1,24 +1,23 @@
-<h1>Все пользователи</h1>
-
-<%= link_to 'На главную', home_path %><br>
-<br>
-<%= link_to 'Новый пользователь', new_admin_user_path %><br>
-<br>
-<table>
-
-    <th> Name </th>
-    <th> Email </th>
-
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= user.email %></td>
-    <td><%= link_to ' Показать', admin_user_path(user) %></td>
-  </tr>
-  <% end %>
-</table>
-
-<%=  paginate @users %>
-
-
+h1
+| Все пользователи
+|  <%= link_to 'На главную', home_path %>
+br
+br
+|  <%= link_to 'Новый пользователь', new_admin_user_path %>
+br
+br
+table
+th
+|  Name
+th
+|  Email
+|  <% @users.each do |user| %>
+  tr
+  td
+  | <%= user.name %>
+  td
+  | <%= user.email %>
+  td
+  | <%= link_to ' Показать', admin_user_path(user) %>
+  |  <% end %>
+|  <%= paginate @users %> 
