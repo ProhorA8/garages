@@ -1,0 +1,9 @@
+h1 Редактирование пользователя
+
+= form_for :user, url: admin_user_path, method: :patch do |form|
+  p = form.label :name
+  p = form.text_field :name
+  p = form.label :email
+  p = form.text_field :email
+  p = form.submit 'Обновить'
+  p = link_to 'Назад', admin_user_path

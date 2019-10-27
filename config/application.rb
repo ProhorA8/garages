@@ -37,5 +37,7 @@ module Garages
     config.generators do |g|
       g.template_engine :slim
     end
+
+    config.i18n.default_locale = :ru
   end
 end

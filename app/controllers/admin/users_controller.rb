@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: %i[show edit update destroy]
 
   def index
-    @users = User.order(:name).page(params[:page]).per(6)
+    @users = User.order(:name).page(params[:page]).per(6).padding(3)
   end
 
   def show; end
