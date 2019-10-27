@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Garages</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
-
-  <body>
-  <%= @users.each do |user| %>
-    <li><%= link_to user.name, user_path(user) %></li>
-  <%end %>
-  <div class="container">
-    <%= yield %>
-  </div>
-  </body>
-</html>
+doctype html
+html
+  head
+    title
+      | Garages
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+    = @users.each do |user|
+      li
+        = link_to user.name, user_path(user)
+    .container
+      = yield
