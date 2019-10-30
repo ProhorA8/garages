@@ -33,5 +33,5 @@ en:
   hello: "Hello world"
   views:
     pagination:
-      previous: "&lt; Previous"
+      previous: "&lt Previous"
       next: "Next &gt;"

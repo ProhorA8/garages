@@ -1,5 +1,10 @@
-p = link_to 'На главную', home_path
-p = link_to 'Новый пользователь', new_admin_user_path
+<ol class="breadcrumb">
+  <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+  <li><a href="#">Tables</a></li>
+  <li class="active">User tables</li>
+</ol>
+/p = link_to 'На главную', home_path
+/p = link_to 'Новый пользователь', new_admin_user_path
 table
 div class = "box"
   div id = "example2_wrapper" class = "dataTables_wrapper form-inline dt-bootstrap"
@@ -9,6 +14,7 @@ div class = "box"
       tr role = "row"
         th class = "sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" User Name
         th class = "sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" Email
+        th class = "sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" New
         th class = "sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" View
         th class = "sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" Edit
         th class = "sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" Delete
@@ -20,6 +26,8 @@ div class = "box"
         td
           = user.email
         td
+          p = link_to 'Новый пользователь', new_admin_user_path
+        td
           p = link_to ' Показать', admin_user_path(user)
         td
           p = link_to 'Редактировать', edit_admin_user_path(user)
@@ -28,11 +36,13 @@ div class = "box"
     tr
       th rowspan="1" colspan="1" User Name
       th rowspan="1" colspan="1" Email
+      th rowspan="1" colspan="1" New
       th rowspan="1" colspan="1" View
       th rowspan="1" colspan="1" Edit
       th rowspan="1" colspan="1" Delete
-div class="col-sm-5"
-div class="dataTables_info" id="example2_info" role="status" aria-live="polite" Showing 1 to 10 of 57 entries
-div class="col-sm-4"
-div class="col-sm-4"
-  p = paginate @users
+  .row
+    .col-sm-5
+      #example1_info.dataTables_info aria-live="polite" role="status"  Showing 1 to 10 of 57 entries
+    .col-sm-7
+      #example1_paginate.dataTables_paginate.paging_simple_numbers
+        p = paginate @users
