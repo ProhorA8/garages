@@ -5,5 +5,7 @@ h1 Редактирование пользователя
   p = form.text_field :name
   p = form.label :email
   p = form.text_field :email
+  p = form.password_field :password
+  p = form.password_field :password_confirmation
   p = form.submit 'Обновить'
   p = link_to 'Назад', admin_user_path
