@@ -1,11 +1,16 @@
 h2 Добавление пользователя
 
 = form_for @user, url: admin_user_path do |f|
+
   p Имя
   p = f.text_field :name
+
   p Имэйл
   p = f.text_field :email
+
   p Пароль
+  p = f.text_field :password
   p = f.password_field :password
   p = f.password_field :password_confirmation
+
   p = f.submit 'Сохранить'
