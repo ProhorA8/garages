@@ -1,18 +1,8 @@
 h2 Новый пользователь
 
-= form_for @user, url: admin_users_path do |f|
-  - if @user.errors.any?
-    h2 = "#{pluralize(@user.errors.count, 'ошибки')}, запрет на сохранение:"
-    - @user.errors.full_messages.each do |msg|
-      p = msg
-
-  p Имя
-  p = f.text_field :name
-  p Имэйл
-  p = f.text_field :email
-  p Пароль
-  P = f.password_field :password
-  p = f.label :password_confirmation
-  p = f.password_field :password_confirmation
-  p = f.submit 'Сохранить'
-  p = link_to 'Назад', admin_users_path
+= simple_form_for @user, url: admin_users_path do |f|
+  = f.input :name
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.button :submit, 'Сохранить'

@@ -38,6 +38,10 @@ module Garages
       g.template_engine :slim
     end
 
+    # устанавливаем локаль по умолчанию на что-либо другое, чем :en
     config.i18n.default_locale = :ru
+
+    # где библиотека I18n должна искать наши переводы
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end
