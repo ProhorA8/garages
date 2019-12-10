@@ -1,0 +1,68 @@
+p
+  = link_to 'Новый пользователь', new_admin_user_path
+  .box
+    #example2_wrapper.dataTables_wrapper.form-inline.dt-bootstrap
+      .col-sm-12
+        #example2.table.table-bordered.table-hover.dataTable.role.grid.aria-describedby.example2_info
+          thead
+            tr role = "row"
+              th [
+                class = "sorting_asc"
+                tabindex="0"
+                aria-controls="example2"
+                rowspan="1" colspan="1"
+                aria-sort="ascending"
+                aria-label="Rendering engine: activate to sort column descending"
+              ] User Name
+
+              th [
+                class = "sorting"
+                tabindex="0"
+                aria-controls="example2"
+                rowspan="1" colspan="1"
+                aria-label="Browser: activate to sort column ascending"
+                ] Email
+              th [
+                class = "sorting"
+                tabindex="0"
+                aria-controls="example2"
+                rowspan="1" colspan="1"
+                aria-label="Platform(s): activate to sort column ascending"
+                ] View
+              th [
+                class = "sorting"
+                tabindex="0" aria-controls="example2"
+                rowspan="1" colspan="1"
+                aria-label="Engine version: activate to sort column ascending"
+                ] Edit
+              th [
+                class = "sorting"
+                tabindex="0" aria-controls="example2"
+                rowspan="1" colspan="1"
+                aria-label="CSS grade: activate to sort column ascending"
+                ] Delete
+          tbody
+            - @users.each do |user|
+              tr
+                td
+                  = user.name
+                td
+                  = user.email
+                td
+                  p = link_to ' Показать', admin_user_path(user)
+                td
+                  p = link_to 'Редактировать', edit_admin_user_path(user)
+                td
+                  p = link_to 'Удалить' , admin_user_path(user),method: :delete, data: { confirm: 'Вы уверены?'}
+            tr
+              th rowspan="1" colspan="1" User Name
+              th rowspan="1" colspan="1" Email
+              th rowspan="1" colspan="1" View
+              th rowspan="1" colspan="1" Edit
+              th rowspan="1" colspan="1" Delete
+        .row
+          .col-sm-5
+            #example1_info.dataTables_info aria-live="polite" role="status"  Showing 1 to 10 of 57 entries
+          .col-sm-7
+            #example1_paginate.dataTables_paginate.paging_simple_numbers
+              p = paginate @users

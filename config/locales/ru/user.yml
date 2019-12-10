@@ -1,0 +1,10 @@
+ru:
+  activerecord:
+    models:
+      user: Пользователь
+    attributes:
+      user:
+        name: Имя
+        email: Поле почты
+        password: Пароль
+        password_confirmation: Подтверждение пароля

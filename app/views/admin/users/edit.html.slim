@@ -1,0 +1,13 @@
+h1 Редактирование пользователя
+
+= simple_form_for :user, url: admin_user_path, method: :patch do |form|
+
+  p = form.input :name, label: 'Your username please', error: 'Username is mandatory, please specify one'
+
+  p = form.input :password, wrapper_html: { id: 'password' }, hint: 'No special characters.'
+
+  p = form.input :email, placeholder: 'user@domain.com'
+
+  /p = form.input :remember_me, inline_label: 'Yes, remember me'
+    
+  p = form.button :submit

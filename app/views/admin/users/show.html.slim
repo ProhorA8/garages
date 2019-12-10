@@ -1,0 +1,19 @@
+h1 Пользователь
+
+= simple_form_for
+
+strong
+p Name:
+p = @user.name
+
+strong
+p Email:
+p = @user.email
+
+strong
+p Password
+p = @user.password
+p = link_to 'Редактирование', edit_admin_user_path(@user), :class => 'btn btn-warning'
+p = link_to 'Удалить', admin_user_path, method: :delete, data: { confirm: 'Вы уверены?'}
+p = link_to 'Назад', admin_users_path(@user),class: 'btn btn-outline-secondary'
+time = @user.created_at.to_date.strftime('%d %B %Y')

@@ -51,11 +51,11 @@ gem 'jquery-ui-rails'
 # The EmailAddress Gem to work with and validate email addresses.
 gem 'validates_email_format_of'
 
-# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+# Paginator for Ruby.
 gem 'kaminari'
 
 # Validates whether the specified value is a valid email address.
-# Returns nil if the value is valid,otherwise returns an array
+# Returns nil if the value is valid,otherwise returns an array.
 gem 'email_format'
 
 # Russian language support for Ruby and Rails, using I18n library.
@@ -66,6 +66,13 @@ gem 'russian', '~> 0.6.0'
 # and generating responses by rendering views , which are templates of various formats.
 gem 'actionpack', '~> 5.0', '>= 5.0.0.1'
 
+# Slim is a template language goal is to reduce the view syntax to the essential parts.
+gem 'slim'
+
+# Simple Form is to not touch your way of defining the layout,
+# letting you find the better design for your eyes.
+gem 'simple_form'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -75,7 +82,8 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

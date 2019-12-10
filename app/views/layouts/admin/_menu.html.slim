@@ -1,12 +1,14 @@
 adul.sidebar-menu
-  li.header HEADER
-  li.active_
-    = link_to admin_users_path do
-        i.fa.fa-link 
-        span users
-        li.active_
-          = link_to admin_users_path do
-            span users
-
-/ lavrik - remove not used
-
+  li.header MAIN NAVIGATION PROHOR
+adul.sidebar-menu
+  li.treeview.active.menu-open
+    a href="#"
+      i.fa.fa-table
+      span Users
+      span.pull-right-container
+        i.fa.fa-angle-left.pull-right
+    ul.treeview-menu
+      li.active_
+        = link_to admin_users_path do
+          i.fa.fa-circle-o
+          | User tables
